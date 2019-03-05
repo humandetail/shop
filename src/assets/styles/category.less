@@ -1,0 +1,167 @@
+// category.less
+
+.category-page {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  // header
+  .header {
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    padding: .1rem;
+    width: 100%;
+    height: .8rem;
+    background: #fff;
+    font-size: .36rem;
+    & > .icon {
+      display: block;
+      width: .6rem;
+      height: .6rem;
+      line-height: .6rem;
+      text-align: center;
+      color: @mainText;
+      font-size: inherit;
+      &:first-child {
+        margin-right: .2rem;
+      }
+      &:last-child {
+        margin-left: .2rem;
+        position: relative;
+      }
+      & > .iconfont {
+        font-size: inherit;
+      }
+    }
+    & > .search-fluid {
+      flex: 1;
+      display: flex;
+      height: .6rem;
+      background: @categoryBg;
+      border-radius: .1rem;
+      & > .icon {
+        display: block;
+        width: .6rem;
+        line-height: .6rem;
+        text-align: center;
+        font-size: inherit;
+      }
+      & > .search-keyword {
+        box-sizing: border-box;
+        flex: 1;
+        display: block;
+        padding: .1rem 0;
+        height: .6rem;
+        line-height: .4rem;
+        background: transparent;
+        border: 0;
+        border-radius: .1rem;
+        font-size: .28rem;
+      }
+    }
+  }
+  // 侧边导航
+  .aside {
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: .8rem;
+    z-index: 998;
+    width: 1.6rem;
+    height: calc(100% - 1.8rem);
+    overflow: hidden;
+    .nav {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: @categoryBg;
+      .content {
+        margin: 0;
+        padding: 0;
+        .item {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          width: 100%;
+          height: 1rem;
+          line-height: 1rem;
+          font-size: .24rem;
+          text-align: center;
+          background: inherit;
+          color: @mainText;
+          font-weight: normal;
+          &.active {
+            background: #fff;
+            color: @mainColor;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  // 分类列表
+  .list {
+    box-sizing: border-box;
+    width: 100%;
+    padding: .8rem .2rem 1.1rem 1.8rem;
+    .advert {
+      width: 100%;
+      height: 0;
+      padding-bottom: 33.5%;
+      background: @placeholderColor;
+      img {
+        width: 100%;
+      }
+    }
+    .section {
+      box-sizing: border-box;
+      margin-top: .2rem;
+      padding: 0 .2rem;
+      background: #fff;
+      .title {
+        margin: 0;
+        padding: 0;
+        height: .6rem;
+        line-height: .6rem;
+        font-size: .2rem;
+        font-weight: normal;
+        em {
+          font-style: normal;
+          font-size: .24rem;
+          font-weight: 700;
+        }
+      }
+      .content {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .item {
+          list-style: none;
+          margin: 0 0 .2rem 0;
+          width: 33.333%;
+          figure {
+            margin: 0;
+            padding: 0;
+            display: block;
+            width: 100%;
+            text-align: center;
+            img {
+              width: 90%;
+            }
+            figcaption {
+              line-height: .4rem;
+              font-size: .2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

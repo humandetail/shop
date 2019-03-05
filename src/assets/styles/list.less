@@ -1,0 +1,140 @@
+// 列表样式表
+.list-page {
+  width: 100%;
+  // 头部导航
+  .header {
+    box-sizing: border-box;
+    display: flex;
+    padding: .1rem 0;
+    height: .8rem;
+    background: #fff;
+    & > .icon {
+      display: block;
+      width: .6rem;
+      height: .6rem;
+      line-height: .6rem;
+      font-size: .44rem;
+      text-align: center;
+      color: @mainText;
+      &:first-child {
+        margin-right: .2rem;
+      }
+      &:last-child {
+        margin-left: .2rem;
+      }
+    }
+    .search-fluid {
+      flex: 1;
+      display: flex;
+      border-radius: .1rem;
+      background: @categoryBg;
+      & > .icon {
+        width: .6rem;
+        height: .6rem;
+        line-height: .6rem;
+        text-align: center;
+        font-size: .36rem;
+        color: @grayText;
+      }
+      .search-keyword {
+        flex: 1;
+        box-sizing: border-box;
+        padding: .1rem 0;
+        border: 0;
+        border-radius: .1rem;
+        background: transparent;
+      }
+    }
+  }
+  // 筛选栏
+  .ctrl {
+    margin: .2rem 0 0 0;
+    width: 100%;
+    height: .8rem;
+    line-height: .8rem;
+    background: #fff;
+    .fluid {
+      display: flex;
+      margin: 0;
+      padding: 0 .2rem;
+      .item {
+        list-style: none;
+        width: 25%;
+        text-align: center;
+        font-size: .32rem;
+        &.active {
+          font-weight: 700;
+          color: @mainColor;
+        }
+        .icon {
+          height: .6rem;
+          line-height: .6rem;
+          &.icon-order-desc:before {
+            vertical-align: top;
+          }
+          &.icon-order-asc:before {
+            vertical-align: bottom;
+          }
+        }
+      }
+    }
+  }
+  // 列表
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: .2rem 0 0 0;
+    padding: 0 .2rem;
+    .item {
+      box-sizing: border-box;
+      list-style: none;
+      padding: .2rem;
+      width: 50%;
+      background: #fff;
+      figure {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        img {
+          width: 100%;
+        }
+        .name {
+          margin: .06rem 0 0;
+          width: 100%;
+          height: .4rem;
+          line-height: .4rem;
+          font-size: .28rem;
+          .ellipsis();
+        }
+        .price {
+          margin: .06rem 0 0;
+          width: 100%;
+          line-height: .4rem;
+          color: @mainColor;
+          .icon,
+          .floor {
+            font-size: .28rem;
+            font-style: normal;
+          }
+          em {
+            margin: 0 -.1rem;
+            font-style: normal;
+            font-weight: 700;
+            font-size: .4rem;
+          }
+        }
+        .assessment {
+          margin: .06rem 0 0;
+          width: 100%;
+          line-height: .4rem;
+          color: @grayText;
+          font-size: .28rem;
+          .ellipsis();
+          .number {
+            margin-right: -.1rem;
+          }
+        }
+      }
+    }
+  }
+}
